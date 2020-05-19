@@ -1,0 +1,1 @@
+cmd_/home/shaswata56/projects/klogger/klogger.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 --build-id  -T ./scripts/module-common.lds -o /home/shaswata56/projects/klogger/klogger.ko /home/shaswata56/projects/klogger/klogger.o /home/shaswata56/projects/klogger/klogger.mod.o;  true
