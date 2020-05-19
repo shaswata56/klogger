@@ -125,6 +125,7 @@ static int __init klogger_init(void)
 static void __exit klogger_exit(void)
 {
 	unregister_keyboard_notifier(&klogger_blk);
+	debugfs_remove_recursive(dir);
 }
 
 module_init(klogger_init);
