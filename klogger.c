@@ -20,10 +20,9 @@
  *******************************************************************/
 
 #include <linux/fs.h>
-#include <asm/uaccess.h>
 #include <linux/input.h>
+#include <asm/uaccess.h>
 #include <linux/module.h>
-#include <linux/kbd_kern.h>
 #include <linux/interrupt.h>
 
 #define DRIVER_AUTHOR "Shaswata Das <shaswata56@gmail.com>"
@@ -36,8 +35,6 @@ MODULE_AUTHOR(DRIVER_AUTHOR);
 MODULE_LICENSE(DRIVER_LICENSE);
 MODULE_VERSION(DRIVER_VERSION);
 MODULE_DESCRIPTION(DRIVER_DESC);
-
-extern int shift_state;
 
 #define KBD_IRQ 1
 #define BUF_LEN 12
